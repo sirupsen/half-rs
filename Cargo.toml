@@ -19,6 +19,7 @@ std = ["alloc"]
 use-intrinsics = [] # Deprecated
 alloc = []
 rand_distr = ["dep:rand", "dep:rand_distr"]
+bincode = ["dep:bincode"]
 
 [dependencies]
 cfg-if = "1.0.0"
@@ -32,6 +33,7 @@ num-traits = { version = "0.2.14", default-features = false, features = ["libm"]
 zerocopy = { version = "0.6.0", default-features = false, optional = true }
 rand = { version = "0.8.5", default-features = false, optional = true }
 rand_distr = { version = "0.4.3", default-features = false, optional = true }
+bincode = { version = "2.0.0-rc.3", default-features = false, optional = true }
 
 [target.'cfg(target_arch = "spirv")'.dependencies]
 crunchy = "0.2.2"
